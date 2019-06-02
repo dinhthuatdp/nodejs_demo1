@@ -1,0 +1,23 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "Demo node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "SET NODE_ENV=development&node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.2.6",
+    "mongoose": "^5.5.11",
+    "express": "^4.17.1",
+    "cookie-parser": "^1.4.4",
+    "custom-env": "^1.0.1",
+    "dateformat": "^3.0.3",
+    "mongoose-extend-schema": "^1.0.0",
+    "typescript": "^3.5.1",
+    "dotenv": "^8.0.0"
+  }
+}

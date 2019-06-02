@@ -1,0 +1,13 @@
+{
+    "config_id": "development",
+    "app_name": "Demo 1",
+    "app_desc": "my app desc",
+    "port": 8080,
+    "json_indentation": 4,
+    "database": "mydb",
+    "db_user": "",
+    "db_pass": "",
+    "version": "v1.0",
+    "url": "/dev/api",
+    "db_host": "127.0.0.1:27017"
+}
