@@ -1,6 +1,8 @@
 'use strict';
 
 var mongoose = require('mongoose');
+var assert = require('assert');
+
 var dbUrl = 'mongodb://127.0.0.1:27017/mydb';
 
 var connectWithRetry = async function open() {
@@ -12,6 +14,7 @@ var connectWithRetry = async function open() {
                 setTimeout(connectWithRetry, 5000);
             }
         });
+        console.log("DB opened: " + db);
         return db;
     } catch (err) {
         console.log('Connect DB error: ' + err);
@@ -21,9 +24,10 @@ var connectWithRetry = async function open() {
 
 process.on('SIGINT', function() {
     // If the Node process ends, close the Mongoose connection.
-    mongoose.connection.close(function () { 
-      console.log('Mongoose default connection disconnected through app termination'); 
-      process.exit(0); 
+    mongoose.connection.close(function () {
+        
+        console.log('Mongoose default connection disconnected through app termination'); 
+        process.exit(0); 
     });
 });
 
@@ -109,7 +113,7 @@ async function save(model, product) {
     }
 }
 
-let db = {
+let dbfuncs = {
     open : connectWithRetry,
     close: close,
     find: find,
@@ -117,4 +121,4 @@ let db = {
     save: save,
 };
 
-module.exports = db;
+module.exports = dbfuncs;
