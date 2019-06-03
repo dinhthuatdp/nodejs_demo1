@@ -2,8 +2,8 @@
 
 var mongoose = require('mongoose');
 var dateFormat = require('dateformat');
-var mongodb = require('../../db');
-var Product = require('../../db/models/product/product.model')
+var mongodb = require('../db');
+var Product = require('../models/product/product.model')
 
 const Schema = mongoose.Schema;
 
