@@ -5,10 +5,6 @@ var dateFormat = require('dateformat');
 var mongodb = require('../db');
 var Product = require('../models/product/product.model')
 
-const Schema = mongoose.Schema;
-
-var db = mongodb.open();
-
 async function getAllProduct(req, res) {
 
     let products = await mongodb.find(Product);
@@ -26,6 +22,7 @@ async function getProduct(req, res) {
 async function addProduct(req, res) {
     
     try {
+
         res.setHeader('Content-Type', 'application/json');
 
         var product = new Product();
