@@ -8,6 +8,6 @@ const productSchema = extendSchema(baseModel, {
     name: { type: String, required: true },
 });
 
-var ProductModel = mongoose.model("Product", productSchema);
+var ProductModel = mongoose.model("Product", productSchema, 'products');
 
 module.exports = ProductModel;

@@ -4,7 +4,6 @@ var express = require('express');
 var productController = require('../../controllers/product.controller');
 
 const router = express.Router();
-
 console.log('----------Product router.');
 
 // Get all products.

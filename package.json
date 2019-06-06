@@ -19,6 +19,8 @@
     "mongoose-extend-schema": "^1.0.0",
     "typescript": "^3.5.1",
     "dotenv": "^8.0.0",
-    "assert": "^2.0.0"
+    "assert": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "bcrypt": "3.0.6"
   }
 }
